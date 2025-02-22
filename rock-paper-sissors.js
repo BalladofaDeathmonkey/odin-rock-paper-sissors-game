@@ -97,19 +97,22 @@ function playGame(numberOfRounds) {
     computerSelection = getComputerChoice();
     console.log(`Computer: ${computerSelection}`);
     playRound(computerSelection, humanSelection);
-    console.log("--------------------------------------------------")
+    console.log("--------------------------------------------------");
   }
 
   if (humanScore > computerScore) {
-    console.log("%cYOU'VE WON the GAME!!! :) Press F5 on your keyboard to play again.", "color: red")
-    console.log("--------------------------------------------------")
-  }
-  else if (computerScore > humanScore) {
-    console.log("Sorry, you lose - the computer has won the game:( Press F5 on your keyboard to play again.")
-    console.log("--------------------------------------------------")
-  }
-  else {
-    console.log("It a tie - Press F5 on your keyboard to play again.")
-    console.log("--------------------------------------------------")
+    console.log(
+      "%cYOU'VE WON the GAME!!! :) Press F5 on your keyboard to play again.",
+      "color: red"
+    );
+    console.log("--------------------------------------------------");
+  } else if (computerScore > humanScore) {
+    console.log(
+      "Sorry, you lose - the computer has won the game:( Press F5 on your keyboard to play again."
+    );
+    console.log("--------------------------------------------------");
+  } else {
+    console.log("It a tie - Press F5 on your keyboard to play again.");
+    console.log("--------------------------------------------------");
   }
 }
