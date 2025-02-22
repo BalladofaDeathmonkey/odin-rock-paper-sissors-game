@@ -1,6 +1,6 @@
 //declare global variables to keep track of player's score
-let humanScore = 0;
-let computerScore = 0;
+let intHumanScore = 0;
+let intComputerScore = 0;
 
 // get computer choice
 //get random number between 1 - 3
@@ -38,46 +38,46 @@ function getHumanChoice() {
 function playRound(computerChoice, humanChoice) {
   if (computerChoice === "rock" && humanChoice === "rock") {
     console.log("It's a tie.");
-    console.log(`Computer Score: ${computerScore}`);
-    console.log(`Your score: ${humanScore}`);
+    console.log(`Computer Score: ${intComputerScore}`);
+    console.log(`Your score: ${intHumanScore}`);
   } else if (computerChoice === "paper" && humanChoice === "paper") {
     console.log("It's a tie.");
-    console.log(`Computer Score: ${computerScore}`);
-    console.log(`Your score: ${humanScore}`);
+    console.log(`Computer Score: ${intComputerScore}`);
+    console.log(`Your score: ${intHumanScore}`);
   } else if (computerChoice === "scissors" && humanChoice === "scissors") {
     console.log("It's a tie.");
-    console.log(`Computer Score: ${computerScore}`);
-    console.log(`Your score: ${humanScore}`);
+    console.log(`Computer Score: ${intComputerScore}`);
+    console.log(`Your score: ${intHumanScore}`);
   } else if (computerChoice === "rock" && humanChoice === "scissors") {
     console.log("computer wins this round.");
-    computerScore += 1;
-    console.log(`Computer Score: ${computerScore}`);
-    console.log(`Your score: ${humanScore}`);
+    intComputerScore += 1;
+    console.log(`Computer Score: ${intComputerScore}`);
+    console.log(`Your score: ${intHumanScore}`);
   } else if (computerChoice === "paper" && humanChoice === "rock") {
     console.log("computer wins this round.");
-    computerScore += 1;
-    console.log(`Computer Score: ${computerScore}`);
-    console.log(`Your score: ${humanScore}`);
+    intComputerScore += 1;
+    console.log(`Computer Score: ${intComputerScore}`);
+    console.log(`Your score: ${intHumanScore}`);
   } else if (computerChoice === "scissors" && humanChoice === "paper") {
     console.log("computer wins this round.");
-    computerScore += 1;
-    console.log(`Computer Score: ${computerScore}`);
-    console.log(`Your score: ${humanScore}`);
+    intComputerScore += 1;
+    console.log(`Computer Score: ${intComputerScore}`);
+    console.log(`Your score: ${intHumanScore}`);
   } else if (humanChoice === "rock" && computerChoice === "scissors") {
     console.log("You win this round.");
-    humanScore += 1;
-    console.log(`Computer Score: ${computerScore}`);
-    console.log(`Your score: ${humanScore}`);
+    intHumanScore += 1;
+    console.log(`Computer Score: ${intComputerScore}`);
+    console.log(`Your score: ${intHumanScore}`);
   } else if (humanChoice === "paper" && computerChoice === "rock") {
     console.log("You win this round.");
-    humanScore += 1;
-    console.log(`Computer Score: ${computerScore}`);
-    console.log(`Your score: ${humanScore}`);
+    intHumanScore += 1;
+    console.log(`Computer Score: ${intComputerScore}`);
+    console.log(`Your score: ${intHumanScore}`);
   } else if (humanChoice === "scissors" && computerChoice === "paper") {
     console.log("You win this round.");
-    humanScore += 1;
-    console.log(`Computer Score: ${computerScore}`);
-    console.log(`Your score: ${humanScore}`);
+    intHumanScore += 1;
+    console.log(`Computer Score: ${intComputerScore}`);
+    console.log(`Your score: ${intHumanScore}`);
   }
 }
 //enter in the prompt how many rounds you would like to play
@@ -100,13 +100,13 @@ function playGame(numberOfRounds) {
     console.log("--------------------------------------------------");
   }
 
-  if (humanScore > computerScore) {
+  if (intHumanScore > intComputerScore) {
     console.log(
       "%cYOU'VE WON the GAME!!! :) Press F5 on your keyboard to play again.",
       "color: red"
     );
     console.log("--------------------------------------------------");
-  } else if (computerScore > humanScore) {
+  } else if (intComputerScore > intHumanScore) {
     console.log(
       "Sorry, you lose - the computer has won the game:( Press F5 on your keyboard to play again."
     );
